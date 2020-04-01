@@ -1153,10 +1153,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@lespantsfancy/message-transfer-system@^0.1.42":
-  version "0.1.42"
-  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.1.42.tgz#a2865399747d4b2529d2a2c6b9e582b7d4a21be9"
-  integrity sha512-vgG/xUIkVOS3ub/+rmCjf/hKDoKJl/kNligxyaOVNB07LBd/lngE4EpPuvMYFO30KbOmOOOqgFMrNrsXdh5uzw==
+"@lespantsfancy/message-transfer-system@^0.1.50":
+  version "0.1.50"
+  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.1.50.tgz#92e588eddc24adc8ffaddfa5faba7bb359b6f2f8"
+  integrity sha512-2TA4xJgN5pjVsSUj2SL1uyAZCdiBuFa2uEqXE55xxFv9lSEj3irs8SQ2AGphz5zRZZ7QOQVpiaYPB+AudSyjVw==
+  dependencies:
+    qrcode "^1.4.4"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
