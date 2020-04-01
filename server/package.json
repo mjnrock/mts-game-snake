@@ -1,0 +1,16 @@
+{
+  "name": "mts-game-hangman-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node esm-index.js"
+  },
+  "dependencies": {
+    "@lespantsfancy/message-transfer-system": "^0.1.42",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "ws": "^7.2.3"
+  }
+}
