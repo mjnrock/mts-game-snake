@@ -22,6 +22,7 @@ const MTS = (new MTSLib.Main({
     receive: function(msg) {
         MTSLib.MSRP(msg, {
             scope: MTS
+            // node: MTS
         })
         .if(Game.SignalTypes.NEW_PLAYER)
             .run(msg => {
@@ -41,7 +42,6 @@ const MTS = (new MTSLib.Main({
                     Game.State.Viewers.push(id);
                 }
             })
-            .call(Game.assignScribe)
     }
 })).loadNetwork(true);
 
