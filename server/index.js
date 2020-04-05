@@ -18,18 +18,16 @@ const Game = {
     }
 };
 
-const MTS = (new MTSLib.Main({
-    receive: function(msg) {
-        MTSLib.MSRP(msg, {
-            scope: MTS
-            // node: MTS
+const MTS = MTSLib.Modules.Network(new MTSLib.MasterNode({
+    receive: msg => MTSLib.$.MRSP(msg, {
+            node: MTS
         })
         .if(Game.SignalTypes.NEW_PLAYER)
             .run(msg => {
                 if(Game.State.Players.length === 0) {
                     Game.State.Scribe = msg.payload;
                 }
-    
+
                 Game.State.Players.push(msg.payload);
             })
             .send(Game.SignalTypes.SYNC_STATE, Game.State, { elevate: true })
@@ -42,8 +40,7 @@ const MTS = (new MTSLib.Main({
                     Game.State.Viewers.push(id);
                 }
             })
-    }
-})).loadNetwork(true);
+}));
 
 app.ws("/", function (ws, req) {
     let id = MTS.Network.webSocketNode({
@@ -60,5 +57,5 @@ app.ws("/", function (ws, req) {
 });
 
 app.listen(port, () => {
-    console.log(`Hangman server is running on port: ${ port }`)
+    console.log(`Snake server is running on port: ${ port }`)
 });

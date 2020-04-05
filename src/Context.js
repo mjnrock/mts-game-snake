@@ -2,7 +2,7 @@ import React from "react";
 import MTSLib from "@lespantsfancy/message-transfer-system";
 import SignalTypes from "./SignalTypes";
 
-const MTS = (new MTSLib.Main({
+const MTS = MTSLib.Modules.Network(new MTSLib.MasterNode({
     receive: function(msg) {
         if(msg.type === SignalTypes.DECLARE_LETTERS) {
             this.state = {
@@ -25,7 +25,7 @@ const MTS = (new MTSLib.Main({
             };
         }
     }
-})).loadNetwork(false);
+}));
 MTS.toggleStateEmission();
 
 MTS.internal.MODE = "CONTROLLER";

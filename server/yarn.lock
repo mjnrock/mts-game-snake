@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@lespantsfancy/message-transfer-system@^0.1.50":
-  version "0.1.50"
-  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.1.50.tgz#92e588eddc24adc8ffaddfa5faba7bb359b6f2f8"
-  integrity sha512-2TA4xJgN5pjVsSUj2SL1uyAZCdiBuFa2uEqXE55xxFv9lSEj3irs8SQ2AGphz5zRZZ7QOQVpiaYPB+AudSyjVw==
+"@lespantsfancy/message-transfer-system@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.2.3.tgz#5bb9a3628320de55d20205cd46ed4bbcf50f94c6"
+  integrity sha512-ZG7nplQmCOcPOmdDtlPvzkvzMGCvgHhaQV8kQgrEgmd8MQiU+bAGV0cJgd+9iDlrsOugpd6iKqe6AB8S4H87zg==
   dependencies:
     qrcode "^1.4.4"
 

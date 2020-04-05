@@ -4,8 +4,6 @@ import MTSLib from "@lespantsfancy/message-transfer-system";
 
 import SignalTypes from "./../../SignalTypes";
 
-import Winner from "./Winner";
-import WordChoice from "./WordChoice";
 import Alphabet from "./Alphabet";
 
 export default class Game extends React.Component {
@@ -36,18 +34,8 @@ export default class Game extends React.Component {
     }
 
     render() {
-        if(this.context.state.Winner !== false) {
-            return (
-                <Winner />
-            );
-        } else if(this.context.state.Scribe === this.context.Network.getWebSocketNode().id) {
-            return (
-                <WordChoice />
-            );
-        } else {
-            return (
-                <Alphabet />
-            );
-        }
+        return (
+            <Alphabet />
+        );
     }
 };
