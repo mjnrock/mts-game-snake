@@ -130,6 +130,10 @@ export default class GridNode extends Node {
 
                 
                 return false;
+            },
+
+            isWithin: (x0, y0, x1, y1) => {
+                return (x >= x0 && x <= x1) && (y >= y0 && y <= y1);
             }
         }
     }

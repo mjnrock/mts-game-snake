@@ -1153,10 +1153,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@lespantsfancy/message-transfer-system@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.2.3.tgz#5bb9a3628320de55d20205cd46ed4bbcf50f94c6"
-  integrity sha512-ZG7nplQmCOcPOmdDtlPvzkvzMGCvgHhaQV8kQgrEgmd8MQiU+bAGV0cJgd+9iDlrsOugpd6iKqe6AB8S4H87zg==
+"@lespantsfancy/message-transfer-system@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@lespantsfancy/message-transfer-system/-/message-transfer-system-0.2.6.tgz#fb2b093cbe91a4af390f43cd2e81a7f4a701c44d"
+  integrity sha512-YeHCIgP0dxE4sUJLROK+nyut1tg+mIecayx3RRMG0Wby8p9KSwpTrSO0izaMkwJx7Oy0d0aMwetcilxzeRjz6A==
   dependencies:
     qrcode "^1.4.4"
 
