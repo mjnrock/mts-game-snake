@@ -40,6 +40,13 @@ export default class GridNode extends Node {
         };
     }
 
+    get width() {
+        return this.internal.Width;
+    }
+    get height() {
+        return this.internal.Height;
+    }
+
     /**
      * Check if the entry set contains the position
      * @param {number} x 

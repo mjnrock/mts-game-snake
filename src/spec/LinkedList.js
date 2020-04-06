@@ -1,9 +1,13 @@
 class LinkedListNode {
 	constructor(data) {
-		this._data = data;
-		this._previous = null;
-		this._next = null;
-	}
+		this.data = data;
+		this.previous = null;
+		this.next = null;
+    }
+
+    get $() {
+        return this.data;
+    }
 }
 
 class LinkedList {
@@ -11,7 +15,26 @@ class LinkedList {
         this._length = 0;        
 		this._head = null;
 		this._tail = null;
-	}
+    }
+    
+    isEmpty() {
+        return this._length <= 0;
+    }
+
+    each(fn) {
+        if(typeof fn === "function") {            
+            let curr = this._head,
+                i = 0;
+            
+            while (i < this._length) {
+                fn(curr, i);
+                curr = curr.next;
+                i++;
+            }
+            
+            return curr;
+        }
+    }
 
     size() {
         return this._length;
@@ -25,7 +48,7 @@ class LinkedList {
 		}
 		
 		while (i < index) {
-			curr = curr._next;
+			curr = curr.next;
 			i++;
 		}
 		
@@ -36,8 +59,8 @@ class LinkedList {
 		let node = new LinkedListNode(value);
 
 		if(this._length > 0) {
-			this._tail._next = node;
-			node._previous = this._tail;
+			this._tail.next = node;
+			node.previous = this._tail;
 			this._tail = node;
 		} else {
 			this._head = node;
@@ -54,24 +77,24 @@ class LinkedList {
 		}
 
 		if(index === 0) {
-			if(!this._head._next) {
+			if(!this._head.next) {
 				this._head = null;
 				this._tail = null;
 			} else {
-				this._head = this._head._next;
+				this._head = this._head.next;
 			}
 		} else if(index === this._length - 1) {
-			this._tail = this._tail._previous;
+			this._tail = this._tail.previous;
 		} else {
 			let i = 0,
 				curr = this._head;
 			while(i < index) {
-				curr = curr._next;
+				curr = curr.next;
 				i++;
 			}
 			
-			curr._previous._next = curr._next;
-			curr._next._previous = curr._previous;
+			curr.previous.next = curr.next;
+			curr.next.previous = curr.previous;
 		}
 				
 		this._length--;
@@ -79,10 +102,10 @@ class LinkedList {
 			this._tail = this._head;
 		}
 		if(this._length > 0) {
-			this._head._previous = null;
-			this._tail._next = null;
+			this._head.previous = null;
+			this._tail.next = null;
 		}
-	 
+
 
 		return this;
 	}
